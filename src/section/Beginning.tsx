@@ -2,13 +2,15 @@ import gambar1 from '../assets/webp/image_4_4x.webp'
 import gambar2 from '../assets/webp/image_5_4x.webp'
 import gambar3 from '../assets/webp/image_6_4x.webp'
 import { useState } from 'react'
+import SectionTitle from '../components/SectionTitle.tsx'
 
-interface gambarListProps {
+interface GambarItem {
   name: string;
   image: string;
+  para: string;
 }
 
-const gambarList:gambarListProps = [
+const gambarList: GambarItem[] = [
   {
     name: "AMBITION",
     image: gambar1,
@@ -27,12 +29,11 @@ const gambarList:gambarListProps = [
 ]
 
 export default function Beginning() {
-  const [isHover, setIsHover] = useState(gambarList[0]);
+  const [isHover, setIsHover] = useState<GambarItem>(gambarList[0]);
 
   return (
-    <div className='min-h-screen pt-10'>
-      <h1 className='font-readex text-xl tracking-[10px]'>beginning</h1>
-    
+    <div className='min-h-screen pt-10'> 
+      <SectionTitle title={'beginning'} />
       <div className='flex flex-row justify-between gap-20 mt-10'>
         {gambarList.map((list, i) => (
           <div key={i} onMouseEnter={() => setIsHover(list)} className='cursor-default relative hover:scale-103 transition-all duration-300 hover:drop-shadow-2xl/50 drop-shadow-black'>
