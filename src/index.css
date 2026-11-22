@@ -1,1 +1,32 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@font-face {
+  font-family: "pillar";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Pillar.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "swinger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Swinger.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "readex-pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./assets/fonts/ReadexPro-Light.ttf") format("truetype");
+}
+
+@theme {
+  --font-pillar: "pillar", sans-serif;
+  --font-swinger: "swinger", sans-serif;
+  --font-readex: "readex-pro", sans-serif;
+}
+
