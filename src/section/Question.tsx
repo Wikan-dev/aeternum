@@ -7,12 +7,12 @@ export default function Question() {
     <div className='min-h-screen pt-10'> 
       <SectionTitle title={'question'} />
 
-      <img src={gambar} className='mt-5' />
+      <img src={gambar} className='mt-5' data-aos='fade-up' data-aos-delay="200" />
       <div className='flex flex-row mt-10'>
         <p className='font-readex text-xl tracking-widest min-w-[70%]'>
           A gathering of minds, beliefs, and perspectives in the endless pursuit of knowledge, reflecting humanity's desire to understand the world, question existence, and discover the truth. But can knowledge ever reveal the entirety of human existence?
         </p>
-        <img src={gambarMata} className='h-30 w-full object-cover' />
+        <img src={gambarMata} data-aos="fade-up" data-aos-delay='400' className='h-30 w-full object-cover' />
       </div>
     </div>
   )

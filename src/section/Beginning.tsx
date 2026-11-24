@@ -27,7 +27,9 @@ const gambarList: GambarItem[] = [
     para: "The collection of experiences, beliefs, values, and characteristics that define who we are. It explores how individuals shape their sense of self through personal history, social influences, and the choices they make.",
   },
 ]
-
+//TODO: benerin animasi di halaman
+//TODO: hilangin sidebar
+//TODO: benerin aos atau coba gsap
 export default function Beginning() {
   const [isHover, setIsHover] = useState<GambarItem>(gambarList[0]);
 
@@ -36,13 +38,15 @@ export default function Beginning() {
       <SectionTitle title={'beginning'} />
       <div className='flex flex-row justify-between gap-20 mt-10'>
         {gambarList.map((list, i) => (
-          <div key={i} onMouseEnter={() => setIsHover(list)} className='cursor-default relative hover:scale-103 transition-all duration-300 hover:drop-shadow-2xl/50 drop-shadow-black'>
-            <h1 className="absolute text-white opacity-0 hover:opacity-100 h-full bg-red-500 transition-all duration-300 bottom-0 mix-blend-exclusion drop-shadow-2xl/50 pt-[90%] w-full text-center drop-shadow-white text-[200px] font-pillar -translate-x-1/2 left-1/2 ">{list.name}</h1>
-            <img src={list.image} className='' />  
-          </div>
+         <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+           <div onMouseEnter={() => setIsHover(list)} className='cursor-default relative hover:scale-103 transition-all duration-300 ease-out hover:drop-shadow-2xl/50 drop-shadow-black'>
+             <h1 className="absolute text-white opacity-0 hover:opacity-100 h-full bg-red-500 transition-all duration-300 bottom-0 mix-blend-exclusion drop-shadow-2xl/50 pt-[90%] w-full text-center drop-shadow-white text-[200px] font-pillar -translate-x-1/2 left-1/2 ">{list.name}</h1>
+             <img src={list.image} className='transition-all duration-300 ' />
+           </div>
+         </div>
         ))}
       </div>
-      <div className='flex items-start transiton-all duration-300 flex-row gap-10 mt-10 tracking-widest'>
+      <div className='flex items-start transition-all duration-300 flex-row gap-10 mt-10 tracking-widest'>
         <h1 className='font-pillar text-9xl'>{isHover.name}</h1>
         <p className='text-2xl w-[70%] mt-1'>{isHover.para}</p>
       </div>

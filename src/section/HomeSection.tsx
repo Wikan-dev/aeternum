@@ -5,13 +5,13 @@ import arrowBlack from '../assets/svg/arrow-cool-down.svg'
 export default function HomeSection() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <h1 className="pointer-events-none absolute left-1/2 z-0 w-fit -translate-x-1/2 text-center font-pillar text-[1100px] leading-none">
+      <h1 data-aos="fade-up" data-aos-delay="200" className="pointer-events-none absolute left-1/2 z-0 w-fit -translate-x-1/2 text-center font-pillar text-[1100px] leading-none">
         AETERNUM
       </h1>
 
-      <img src={gambar} className="absolute left-1/2 top-1/2 z-10 w-184 -translate-x-1/2 -translate-y-1/2" />
+      <img src={gambar} data-aos="fade-up" data-aos-delay="300" className="absolute left-1/2 top-1/2 z-10 w-184 -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="absolute left-0 right-0 top-220 flex flex-row justify-between px-6 text-4xl">
+      <div data-aos="fade-up" data-aos-delay="500" className="absolute left-0 right-0 top-220 flex flex-row justify-between px-6 text-4xl">
         <h1 className="font-readex">ambition</h1>
         <h1 className="font-readex">mortality</h1>
         <h1 className="font-readex">existence</h1>
