@@ -30,8 +30,7 @@ export default function Explanation() {
   const activeIndex = hoveredIndex ?? 0;
 
   return (
-    <div className='min-h-screen pt-10'>
-      <SectionTitle title='explanation' />
+    <div className='min-h-[80vh] pt-10'> <SectionTitle title='explanation' />
 
       <div className='grid grid-cols-2 gap-10 mt-10'>
         <div className='flex flex-col gap-10'>

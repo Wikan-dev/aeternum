@@ -7,6 +7,7 @@ import HomeSection from './section/HomeSection.tsx';
 import Beginning from './section/Beginning.tsx';
 import Question from './section/Question.tsx';
 import Explanation from './section/Explanation.tsx';
+import Footer from './section/Footer.tsx';
 
 export default function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function App() {
       <Beginning /> 
       <Question /> 
       <Explanation /> 
+      <Footer /> 
     </div>
   )
 }

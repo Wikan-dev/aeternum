@@ -1,7 +1,6 @@
 import gambar from '../assets/webp/4525024da3e88af80c42636717f720df_1_4x.webp'
 import arrowBlack from '../assets/svg/arrow-cool-down.svg'
 
-
 export default function HomeSection() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
