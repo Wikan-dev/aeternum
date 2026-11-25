@@ -31,13 +31,15 @@ export default function App() {
     };
   }, []);
 
-  return ( 
-    <div className='px-20'>
-      <HomeSection /> 
-      <Beginning /> 
-      <Question /> 
-      <Explanation /> 
-      <Footer /> 
-    </div>
+  return (
+    <>
+      <div className='px-20'>
+        <HomeSection /> 
+        <Beginning /> 
+        <Question /> 
+        <Explanation /> 
+      </div>
+      <Footer />
+    </>
   )
 }

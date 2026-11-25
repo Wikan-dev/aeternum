@@ -1,12 +1,14 @@
 import gambar from '../assets/webp/4525024da3e88af80c42636717f720df_1_4x.webp'
 import arrowBlack from '../assets/svg/arrow-cool-down.svg'
+import RevealText from '../components/RevealText.tsx'
 
 export default function HomeSection() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <h1 data-aos="fade-up" data-aos-delay="200" className="pointer-events-none absolute left-1/2 z-0 w-fit -translate-x-1/2 text-center font-pillar text-[1100px] leading-none">
-        AETERNUM
-      </h1>
+      <RevealText
+        text="AETERNUM"
+        className="pointer-events-none absolute left-1/2 z-0 w-fit whitespace-nowrap -translate-x-1/2 text-center font-pillar text-[1100px] leading-none"
+      />
 
       <img src={gambar} data-aos="fade-up" data-aos-delay="300" className="absolute left-1/2 top-1/2 z-10 w-184 -translate-x-1/2 -translate-y-1/2" />
 
@@ -21,6 +23,7 @@ export default function HomeSection() {
       </div>
 
       <img
+        data-aos='fade-up'
         src={arrowBlack}
         alt=""
         className="absolute bottom-6 left-1/2 z-30 w-10 -translate-x-1/2"

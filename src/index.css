@@ -29,3 +29,15 @@
   --font-swinger: "swinger", sans-serif;
   --font-readex: "readex-pro", sans-serif;
 }
+
+/* Sembunyikan scrollbar di semua browser tanpa mematikan fungsi scroll */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge lama */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge, Opera */
+}

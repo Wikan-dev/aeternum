@@ -4,7 +4,7 @@ import gambarMata from '../assets/webp/image_11.webp'
 
 export default function Question() {
   return (
-    <div className='min-h-screen pt-10'> 
+    <div className='min-h-[80vh] pt-10'> 
       <SectionTitle title={'question'} />
 
       <img src={gambar} className='mt-5' data-aos='fade-up' data-aos-delay="200" />
