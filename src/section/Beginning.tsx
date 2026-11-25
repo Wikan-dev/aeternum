@@ -3,6 +3,7 @@ import gambar2 from '../assets/webp/image_5_4x.webp'
 import gambar3 from '../assets/webp/image_6_4x.webp'
 import { useState } from 'react'
 import SectionTitle from '../components/SectionTitle.tsx'
+import ScrollReveal from '../components/ScrollReveal.tsx'
 
 interface GambarItem {
   name: string;
@@ -38,12 +39,12 @@ export default function Beginning() {
       <SectionTitle title={'beginning'} />
       <div className='flex flex-row justify-between gap-20 mt-10'>
         {gambarList.map((list, i) => (
-         <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-           <div onMouseEnter={() => setIsHover(list)} className='cursor-default relative hover:scale-103 transition-all duration-300 ease-out hover:drop-shadow-2xl/50 drop-shadow-black'>
-             <h1 className="absolute text-white opacity-0 hover:opacity-100 h-full bg-red-500 transition-all duration-300 bottom-0 mix-blend-exclusion drop-shadow-2xl/50 pt-[90%] w-full text-center drop-shadow-white text-[200px] font-pillar -translate-x-1/2 left-1/2 ">{list.name}</h1>
-             <img src={list.image} className='transition-all duration-300 ' />
+         <ScrollReveal key={list.name} delay={i * 0.1}>
+           <div onMouseEnter={() => setIsHover(list)} className='cursor-default relative hover:scale-[1.03] transition-transform duration-300 ease-out hover:shadow-2xl will-change-transform'>
+             <h1 className="absolute text-white opacity-0 hover:opacity-100 h-full bg-red-500 transition-opacity duration-300 bottom-0 mix-blend-exclusion pt-[90%] w-full text-center text-[200px] font-pillar -translate-x-1/2 left-1/2 ">{list.name}</h1>
+             <img src={list.image} decoding="async" />
            </div>
-         </div>
+         </ScrollReveal>
         ))}
       </div>
       <div className='flex items-start transition-all duration-300 flex-row gap-10 mt-10 tracking-widest'>

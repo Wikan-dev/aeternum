@@ -38,11 +38,11 @@ export default function RevealText({ text, className = '' }: RevealTextProps) {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 'some' }}
+      viewport={{ once: true, amount: 'some' }}
     >
       {text.match(/./gu)?.map((char, i) => (
         <motion.span
-          className="inline-block"
+          className="inline-block will-change-transform"
           key={`${char}-${i}`}
           variants={charVariants}
         >

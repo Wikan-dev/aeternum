@@ -33,8 +33,16 @@
 /* Sembunyikan scrollbar di semua browser tanpa mematikan fungsi scroll */
 html,
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE & Edge lama */
+}
+
+#root {
+  width: 100%;
+  overflow-x: clip;
 }
 
 html::-webkit-scrollbar,
